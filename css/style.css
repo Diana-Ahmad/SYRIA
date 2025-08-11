@@ -517,21 +517,35 @@
   gap: 30px;
   margin-bottom: 40px;
   overflow-x: auto;
-  flex-wrap: nowrap; /* Keep cards side by side on large screens */
+  flex-wrap: nowrap;
 }
 
-/* On small screens (e.g., less than 768px), stack cards vertically */
+.mm-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.mm-card:hover {
+  transform: scale(0.97); /* Slightly shrink card on hover */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.mm-card:active {
+  transform: scale(0.95); /* Shrink a bit more while pressed */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
 @media (max-width: 767px) {
   .cards-row {
     flex-direction: column;
-    flex-wrap: nowrap; /* Prevent horizontal scrollbar */
     gap: 20px;
     overflow-x: visible;
     align-items: center;
   }
 
   .mm-card {
-    width: 90% !important; /* Make the card width slightly larger on mobile */
+    width: 90% !important;
     max-width: 320px;
   }
 }
