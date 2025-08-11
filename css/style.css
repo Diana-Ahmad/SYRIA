@@ -1,0 +1,537 @@
+/* Media query for screen widths 768px or below */
+@media(max-width:768px) {
+    /* Adjust image heights */
+    #imgh{
+        height: 300px !important;
+    }
+    #contimg{
+        height: 300px !important;
+    }
+}
+
+/* Styling for social media list items */
+.social ul li {
+    list-style: none; /* Remove default list styling */
+    font-size: 2rem; /* Set font size */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Styling for social media icons */
+.social ul li i{
+    color: white; /* Set icon color */
+    background-color: #024a89; /* Set background color */
+    padding: 8px; /* Add padding inside icons */
+    border-radius: 11px; /* Round the corners */
+}
+
+/* Positioning for social media bar */
+.social{
+    position: fixed; /* Fix the position to the screen */
+    top: 6rem; /* Set from top of the page */
+    right: 2rem; /* Set from right of the page */
+    width: 4rem; /* Set width */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    height: 30rem; /* Set height */
+}
+
+/* Media query for smaller screens (below 768px) */
+@media(max-width:768px){
+    .social{
+        height: 16rem; /* Adjust height */
+    }
+    .social ul li{
+        font-size: 1.2rem; /* Adjust font size */
+    }
+    #PP{
+        font-size: 12px; /* Set font size */
+        width: 100% !important; /* Ensure full width */
+        word-break: break-all; /* Allow text to break */
+        font-weight: lighter; /* Make text lighter */
+    }
+    #HH{
+        font-size: 1.4rem; /* Adjust font size */
+    }
+}
+
+/* Social media list styling */
+.listSocial{
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between items */
+    justify-content: center; /* Center items */
+    align-items: stretch; /* Stretch items to fill space */
+}
+
+/* Styling for down section (e.g., footer section) */
+.down{
+    width: 100%; /* Full width */
+    text-align: left; /* Align text to the left */
+    position: relative;
+    padding: 10px;
+    border: navajowhite; /* Set border color */
+    background-color: #212529; /* Dark background color */
+    color: white; /* White text color */
+    font-weight: bold;
+    letter-spacing: 2px; /* Increase letter spacing */
+    text-transform: uppercase; /* Uppercase text */
+}
+
+/* Add a line after the down section */
+.down::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px; /* Line height */
+    background-color: white; /* Line color */
+}
+
+/* Styling for "Go Down" section */
+.godown{
+    height: 100px;
+    width: 100%;
+    background-color: #021d35f5; /* Dark blue background */
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    word-spacing: 3px; /* Space between words */
+}
+
+/* Adjust "Go Down" section for smaller screens */
+@media screen and (max-width:768px) {
+    .godown{
+        word-spacing: 0px; /* Remove word spacing */
+        height: 170px; /* Increase height */
+    }
+}
+
+/* Styling for card news section */
+.card-news{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    position: relative;
+    height: 280px;
+    box-shadow: 0px 0px 24px gray; /* Shadow around card */
+    overflow:hidden; /* Hide overflow */
+}
+
+/* Hover effect for right side of card */
+.card-news:hover .right{
+    transform: scale(1.3); /* Scale up the right side */
+}
+
+/* Left section of the card */
+.card-news .left{
+    background-color: white;
+    width: 70%;
+    transform: skewX(-11deg); /* Skew the left side */
+    height: 100%;
+    position: absolute;
+    z-index: 2; /* Ensure it's above other elements */
+    right: 26%;
+}
+
+/* Styling for the span inside left section */
+.card-news .left span{
+    position: relative;
+}
+
+/* Add a line under the span */
+.card-news .left span::after{
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 3px; /* Line thickness */
+    border-radius: 4px;
+    background-color: #024a89; /* Blue line */
+    bottom: -8px;
+    left: 0;
+    transition: 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for the line under span */
+.card-news:hover .left span::after{
+    width: 50%; /* Expand the line on hover */
+}
+
+/* Right section of the card */
+.card-news .right{
+    width: 30%;
+    height: 100%;
+    background-image: url(../image/HAMA.jpg); /* Background image */
+    background-size: cover; /* Cover the full area */
+    position: absolute;
+    right: 0%;
+    z-index: 1; /* Ensure it's below the left section */
+    transition: .3s; /* Smooth transition */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width:768px) {
+    /* Hide the right section of the card on small screens */
+    .card-news .right{
+        display: none;
+    }
+
+    /* Adjust the left section for small screens */
+    .card-news .left{
+        width: 100%;
+        right: 0;
+        text-align: center;
+        padding: 5px;
+        transform: skew(0deg); /* Remove skew effect */
+    }
+
+    .card-news .left p{
+        font-size: 12px; /* Adjust font size */
+        word-break: break-all; /* Allow text to break */
+    }
+
+    .card-news .left .btn-2{
+        display: none; /* Hide button */
+    }
+
+    .card-news .left .btn-3{
+        display: none; /* Hide button */
+    }
+}
+
+/* Similar styling for the second card */
+.card2-news{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    position: relative;
+    height: 280px;
+    box-shadow: 0px 0px 24px gray;
+    overflow:hidden;
+}
+
+/* Hover effect for right side of second card */
+.card2-news:hover .right{
+    transform: scale(1.3);
+}
+
+/* Left section of the second card */
+.card2-news .left{
+    background-color: white;
+    width: 70%;
+    transform: skewX(11deg); /* Skew the left side */
+    height: 100%;
+    position: absolute;
+    z-index: 2; /* Above other elements */
+    right: 0%;
+    padding: 0px 0px 0px 10px;
+}
+
+/* Styling for the span inside left section of second card */
+.card2-news .left span{
+    position: relative;
+}
+
+/* Add a line under the span in second card */
+.card2-news .left span::after{
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #024a89;
+    bottom: -8px;
+    left: 0;
+    transition: 0.3s;
+}
+
+/* Hover effect for the line under span */
+.card2-news:hover .left span::after{
+    width: 50%;
+}
+
+/* Right section of the second card */
+.card2-news .right{
+    width: 35%;
+    height: 100%;
+    background-image: url(../image/سوق-الحرف-في-التكية-1024x576.webp);
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    z-index: 1;
+    transition: .3s;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width:768px) {
+    .card2-news .right{
+        display: none;
+    }
+
+    /* Adjust the left section for small screens */
+    .card2-news .left{
+        width: 100%;
+        right: 0;
+        text-align: center;
+        padding: 5px;
+        transform: skew(0deg); /* Remove skew effect */
+    }
+
+    .card2-news .left p{
+        font-size: 12px; /* Adjust font size */
+        word-break: break-all; /* Allow text to break */
+    }
+
+    .card2-news .left .btn-2{
+        display: none; /* Hide button */
+    }
+
+    .card2-news .left .btn-3{
+        display: none; /* Hide button */
+    }
+
+    .mm-card{
+        width: fit-content; /* Adjust width */
+    }
+}
+
+/* Fixed background section */
+.fixed{
+    width: 100%;
+    height: 300px;
+    background-image: url(../image/Damascus.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 100px 0px;
+}
+
+/* Card with hover effects */
+.my-card{
+    position: relative;
+}
+
+/* Add overlay effect on hover */
+.my-card::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, .4);
+    transition: .3s;
+}
+
+.my-card::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, .4);
+    transition: .3s;
+}
+
+/* Hover effect for card */
+.my-card:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
+.my-card:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for clickable card */
+.p-card{
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.p-card:hover{
+    transform: scale(.8); /* Scale down on hover */
+}
+
+/* Overlay effect on clickable card */
+.p-card::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 0.7);
+}
+
+/* Position and styling for header inside card */
+.h-card{
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+/* Styling for text inside card */
+.t-card{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    position: absolute;
+    color: white;
+    z-index: 2;
+    top: 50px;
+}
+
+/* Small image inside card */
+.small-img{
+    position: absolute;
+    z-index: 2;
+    left: 15px;
+    bottom: 40px;
+    width: 90px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+/* Styling for paragraph inside card */
+.para-card{
+    position: absolute;
+    left: 18px;
+    bottom: 1px;
+    z-index: 2;
+    color: white;
+}
+
+/* Join Us section styling */
+.join-us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+/* Box styling for Join Us section */
+.join-us .box{
+    text-align: center;
+    padding: 20px;
+    background-color: #0c263d;
+    color: white;
+    box-shadow: 0px 0px 41px 6px cornflowerblue;
+    width: 250px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width:768px){
+    .join-us .box{
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Footer section styling */
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 20px 0; /* Add padding */
+}
+
+/* Box layout for footer */
+.footer .boxs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping of boxes */
+    gap: 20px;
+}
+
+/* Individual box styling in footer */
+.footer .box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 30%; /* Set width of boxes */
+}
+
+/* Header styling inside footer box */
+.footer .box .heade {
+    display: flex;
+    justify-content: center; /* Center header horizontally */
+    align-items: center; /* Center header vertically */
+    gap: 10px; /* Space between icon and title */
+}
+
+/* Footer box header title */
+.footer .box .heade h2 {
+    margin: 0;
+    text-align: center; /* Center the title */
+}
+
+/* Icon styling in footer header */
+.footer .box .heade i {
+    font-size: 24px; /* Icon size */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .footer .box {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Hover effect for join us box icons */
+.join-us .box i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for icon (scale and color change) */
+.join-us .box:hover i {
+    transform: scale(1.2);
+    color: #ff6f61; /* Change color */
+}
+
+/* Hover effect for text inside join us box */
+.join-us .box:hover p {
+    color: #ff6f61; /* Change text color */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Hover effect for footer boxes */
+.footer .boxs .box:hover {
+    transform: scale(1.05); /* Scale the box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Smooth transition for footer box */
+.footer .boxs .box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  flex-wrap: nowrap; /* Keep cards side by side on large screens */
+}
+
+/* On small screens (e.g., less than 768px), stack cards vertically */
+@media (max-width: 767px) {
+  .cards-row {
+    flex-direction: column;
+    flex-wrap: nowrap; /* Prevent horizontal scrollbar */
+    gap: 20px;
+    overflow-x: visible;
+    align-items: center;
+  }
+
+  .mm-card {
+    width: 90% !important; /* Make the card width slightly larger on mobile */
+    max-width: 320px;
+  }
+}
