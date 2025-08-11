@@ -549,3 +549,16 @@
     max-width: 320px;
   }
 }
+@media (max-width: 480px) { 
+  .cards-row {
+    flex-direction: column;
+    gap: 40px;  /* زيادة المسافة بين الكاردات */
+    overflow-x: visible;
+    align-items: center;
+  }
+
+  .mm-card {
+    width: 90% !important;
+    max-width: 320px;
+  }
+}
